@@ -1,30 +1,19 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-// Import partner logos (adjust paths as needed)
-import NCPWD from '../../assets/ncpwd.jpg';
-import kwale from '../../assets/kwale.jpg';
-import GNDR from '../../assets/gndr.png';
-import K4R from '../../assets/k4r.png';
-import PYN from '../../assets/pyn.png';
-import TUNAWEZA from '../../assets/tunaweza.jpg';
-import PFN from '../../assets/PFN.png';
-import Bethany from '../../assets/bethany.jpg';
-import Moh from '../../assets/Moh.png';
-import Rotary from '../../assets/rotary.png';
-
-// Partner data
+// Partner data with absolute paths (assuming images are in public/assets folder)
 const partnerData = [
-  { name: "NCPWD", logo: NCPWD, alt: "National Council for Persons With Disabilities logo" },
-  { name: "Government of Kwale County", logo: kwale, alt: "Government of Kwale County logo" },
-  { name: "GNDR", logo: GNDR, alt: "GNDR logo" },
-  { name: "Kenya for Resilience (K4R)", logo: K4R, alt: "Kenya for Resilience logo" },
-  { name: "Pwani Youth Network", logo: PYN, alt: "Pwani Youth Network logo" },
-  { name: "Tunaweza CBO", logo: TUNAWEZA, alt: "Tunaweza CBO logo" },
-  { name: "Pwani Facilitators Network", logo: PFN, alt: "Pwani Facilitators Network logo" },
-  { name: "Bethany Kids Kenya", logo: Bethany, alt: "Bethany Kids Kenya logo" },
-  { name: "Ministry of Health Kwale", logo: Moh, alt: "Ministry of Health Kwale logo" },
-  { name: "Rotary Club", logo: Rotary, alt: "Rotary Club logo" },
+  { name: "NCPWD", logo: "/assets/ncpwd.jpg", alt: "National Council for Persons With Disabilities logo" },
+  { name: "Government of Kwale County", logo: "/assets/kwale.jpg", alt: "Government of Kwale County logo" },
+  { name: "TINADA Youth Action Africa", logo: "/assets/tinada.png", alt: "TINADA Youth Action Africa logo" },
+  { name: "GNDR", logo: "/assets/gndr.png", alt: "GNDR logo" },
+  { name: "Kenya for Resilience (K4R)", logo: "/assets/k4r.png", alt: "Kenya for Resilience logo" },
+  { name: "Pwani Youth Network", logo: "/assets/pyn.png", alt: "Pwani Youth Network logo" },
+  { name: "Tunaweza CBO", logo: "/assets/tunaweza.jpg", alt: "Tunaweza CBO logo" },
+  { name: "Pwani Facilitators Network", logo: "/assets/PFN.png", alt: "Pwani Facilitators Network logo" },
+  { name: "Bethany Kids Kenya", logo: "/assets/bethany.jpg", alt: "Bethany Kids Kenya logo" },
+  { name: "Ministry of Health Kwale", logo: "/assets/Moh.png", alt: "Ministry of Health Kwale logo" },
+  { name: "Rotary Club", logo: "/assets/rotary.png", alt: "Rotary Club logo" },
 ];
 
 // Simple partner card component
