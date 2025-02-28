@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 // Import partner logos (adjust paths as needed)
 import NCPWD from '../../assets/ncpwd.jpg';
 import kwale from '../../assets/kwale.jpg';
-import Tinada from '../../assets/tinada.png';
+import Tinada from '../../assets/rotary.png';
 import GNDR from '../../assets/gndr.png';
 import K4R from '../../assets/k4r.png';
 import PYN from '../../assets/pyn.png';
