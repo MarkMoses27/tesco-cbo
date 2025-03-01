@@ -151,7 +151,7 @@ const FocusAreas = () => {
             {[
               { title: "Youth", icon: "👫", count: "5K+", desc: "At-risk children & adolescents" },
               { title: "Mothers", icon: "🤱", count: "1.2K+", desc: "Teenage & single mothers" },
-              { title: "Disabled", icon: "♿", count: "800+", desc: "Persons with disabilities" },
+              { title: "PWD", icon: "♿", count: "800+", desc: "Persons with disabilities" },
               { title: "Elderly", icon: "👵", count: "300+", desc: "Senior citizens in need" },
             ].map((group, index) => (
               <div key={index} className="text-center p-6 bg-gray-50 rounded-xl">
