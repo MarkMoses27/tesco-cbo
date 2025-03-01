@@ -47,14 +47,20 @@ const Navbar = () => {
       name: "About Us",
       dropdown: true,
       items: [
-        { name: "The Foundation", path: "/about/foundation" },
-        { name: "Vision & Mission", path: "/about/vision-mission" },
-        { name: "Core Values", path: "/about/core-values" },
-        { name: "Partnerships", path: "/about/partnerships" }
+        { name: "Our History", path: "/about/history" },
+        { name: "Our Team", path: "/about/our-team" },
+        { name: "Testimonials", path: "/about/testimonials" },
       ]
     },
     { name: "Programs", path: "/programs" },
-    { name: "Get Involved", path: "/get-involved" },
+    {name: "Get Involved",
+       dropdown: true, 
+       items: [
+      { name: "Volunteer", path: "/get-involved/volunteer" },
+      { name: "Donate", path: "/get-involved/donate" },
+       ]
+    },
+    
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" }
   ];

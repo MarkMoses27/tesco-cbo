@@ -4,9 +4,14 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
+import History from './pages/about/History';
+import Testimonials from './pages/about/Testimonials';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfUse from './components/TermsOfUse';
 import AccessibilityPolicy from './components/Accessibility';
+import Volunteer from './pages/Volunteer'; // Add Volunteer component import
+import Donate from './pages/Donate'; // Add Donate component import
+import Blog from './pages/Blog'; // Add Blog component import
 import Contact from './pages/Contact'; // Add Contact component import
 
 // Scroll restoration component
@@ -52,6 +57,35 @@ const AnimatedRoutes = () => {
           }
         />
         <Route
+          path="/about/history"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={pageVariants}
+              transition={{ duration: 0.3 }}
+            >
+              <History />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/about/testimonials"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={pageVariants}
+              transition={{ duration: 0.3 }}
+            > 
+              <Testimonials />
+            </motion.div> 
+          }
+        />
+
+        <Route
           path="/privacy-policy"
           element={
             <motion.div
@@ -93,6 +127,49 @@ const AnimatedRoutes = () => {
             </motion.div>
           }
         />
+        <Route
+  path="/get-involved/volunteer"
+  element={
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={{ duration: 0.3 }}
+    >
+      <Volunteer />
+    </motion.div>
+  }
+/>
+        <Route
+  path="/get-involved/donate"
+  element={
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={{ duration: 0.3 }}
+    >
+      <Donate />
+    </motion.div>
+  }
+/>
+
+        <Route
+  path="/blog"
+  element={
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={{ duration: 0.3 }}
+    >
+      <Blog />
+    </motion.div>
+  }
+/>
         {/* Add Contact route */}
         <Route
           path="/contact"
