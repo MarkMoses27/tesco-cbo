@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
             Privacy Policy
           </h1>
           <p className="text-lg text-gray-600">
-            Effective Date: [Insert Date]
+            Effective Date: 4th May 2025
           </p>
         </motion.div>
 
@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
             <p className="text-gray-700 leading-relaxed">
-              [Your Organization Name] ("we," "our," or "us") is committed to
+              Testimony Community Based Organization (TESCO CBO) ("we," "our," or "us") is committed to
               protecting your privacy. This Privacy Policy explains how we
               collect, use, disclose, and safeguard your information when you
               visit our website [website URL] and use our services.

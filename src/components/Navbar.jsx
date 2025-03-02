@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import TECSO_LOGO from "../assets/tesco-cbo.svg";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ const Navbar = () => {
     }
   };
 
-  // Navigation links data for DRY code
+  // Navigation links data
   const navLinks = [
     { name: "Home", path: "/" },
     {
@@ -53,14 +54,14 @@ const Navbar = () => {
       ]
     },
     { name: "Programs", path: "/programs" },
-    {name: "Get Involved",
-       dropdown: true, 
-       items: [
-      { name: "Volunteer", path: "/get-involved/volunteer" },
-      { name: "Donate", path: "/get-involved/donate" },
-       ]
+    {
+      name: "Get Involved",
+      dropdown: true, 
+      items: [
+        { name: "Volunteer", path: "/get-involved/volunteer" },
+        { name: "Donate", path: "/get-involved/donate" },
+      ]
     },
-    
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" }
   ];
@@ -72,8 +73,13 @@ const Navbar = () => {
       role="navigation"
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="text-xl font-bold uppercase tracking-wider flex items-center">
-          <span className="text-2xl font-extrabold">TESCO</span>
+        {/* Logo Section */}
+        <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+          <img 
+            src={TECSO_LOGO} 
+            alt="TESCO Logo" 
+            className="h-20 w-auto"
+          />
         </Link>
 
         {/* Hamburger Menu Button */}
@@ -133,6 +139,7 @@ const Navbar = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
+                    
                     {/* Dropdown Menu */}
                     {activeDropdown === link.name && (
                       <ul 

@@ -5,7 +5,9 @@ import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
 import History from './pages/about/History';
+import OurTeam from './pages/about/Team';
 import Testimonials from './pages/about/Testimonials';
+import Programs from './pages/Programs';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfUse from './components/TermsOfUse';
 import AccessibilityPolicy from './components/Accessibility';
@@ -84,7 +86,34 @@ const AnimatedRoutes = () => {
             </motion.div> 
           }
         />
-
+       <Route
+          path="/about/our-team"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit" 
+              variants={pageVariants}
+              transition={{ duration: 0.3 }}
+            >
+              <OurTeam />
+            </motion.div>
+          }
+        />
+     <Route
+     path="/programs"
+     element={
+       <motion.div
+         initial="initial"
+         animate="animate"
+         exit="exit"
+         variants={pageVariants}
+         transition={{ duration: 0.3 }}
+       >
+         <Programs />
+       </motion.div>
+     }
+   />
         <Route
           path="/privacy-policy"
           element={

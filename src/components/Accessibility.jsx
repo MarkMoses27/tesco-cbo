@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Link } from 'react-router-dom';
 
 const AccessibilityPolicy = () => {
   const [ref, inView] = useInView({
@@ -22,7 +21,7 @@ const AccessibilityPolicy = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Accessibility Statement</h1>
-          <p className="text-lg text-gray-600">Effective Date: [Insert Date]</p>
+          <p className="text-lg text-gray-600">Effective Date:4th May 2025</p>
         </motion.div>
 
         <motion.div
@@ -69,8 +68,8 @@ const AccessibilityPolicy = () => {
             <p className="text-gray-700 leading-relaxed">
               If you experience any accessibility barriers, please contact us:
               <br />
-              <a href="mailto:accessibility@tesco.org" className="text-[var(--accent-color)] hover:underline">
-                accessibility@tesco.org
+              <a href="mailto:Info@testimonycbo.com" className="text-[var(--accent-color)] hover:underline">
+              Info@testimonycbo.com
               </a>
             </p>
           </section>
