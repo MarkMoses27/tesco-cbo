@@ -65,7 +65,7 @@ const TermsOfUse = () => {
           <section>
             <h2 className="text-2xl font-bold mb-4">Limitations</h2>
             <p className="text-gray-700 leading-relaxed">
-              TESCO reserves the right to modify or terminate services at any time. We are not
+              TESCO reserves the right to modify and  terminate services at any time. We are not
               liable for any indirect damages arising from service use.
             </p>
           </section>
