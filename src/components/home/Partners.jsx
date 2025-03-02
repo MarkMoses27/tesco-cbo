@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 
 import NCPWD from '../../assets/ncpwd.png'
 import kwale from '../../assets/kwale.png'
-import Tinada from '../../assets/tinada.png'
 import GNDR from '../../assets/GNDR.png'
 import K4R from '../../assets/K4R.png' 
 import PYN from '../../assets/PYN.png'
@@ -21,7 +20,6 @@ import ROTARY from '../../assets/Rotary.png'
 const partnerData = [
   { name: "NCPWD", logo: NCPWD, alt: "National Council for Persons With Disabilities logo" },
   { name: "Government of Kwale County", logo: kwale, alt: "Government of Kwale County logo" },
-  { name: "TINADA Youth Action Africa", logo: Tinada, alt: "TINADA Youth Action Africa logo" },
   { name: "GNDR", logo: GNDR, alt: "GNDR logo" },
   { name: "Kenya for Resilience (K4R)",logo: K4R, alt: "Kenya for Resilience logo" },
   { name: "Pwani Youth Network", logo: PYN, alt: "Pwani Youth Network logo" },
