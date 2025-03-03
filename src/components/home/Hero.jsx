@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 //images
 import EDUCATION from "../../assets/education.png";
-import INCLUSION from "../../assets/inclusive.png";
+import INCLUSION from "../../assets/Inclusive.png";
 import HEALTH from "../../assets/Health.png";
 import GENDER from "../../assets/Gender.png";
 import ADVOCACY from "../../assets/advocacy.png";
