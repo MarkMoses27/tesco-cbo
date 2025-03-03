@@ -9,11 +9,14 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return 'vendor'; // Separate vendor dependencies
+            if (id.includes('react')) return 'react-vendor';
+            if (id.includes('lodash')) return 'lodash-vendor';
+            return 'vendor'; // Other dependencies
           }
         },
       },
     },
-    chunkSizeWarningLimit: 1000, // Increase chunk size limit
+    chunkSizeWarningLimit: 1000, // Increase chunk size warning limit
+    brotliSize: true, // Enable Brotli compression
   },
 });
