@@ -1,6 +1,13 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
+//images
+import EDUCATION from "../../assets/education.png";
+import INCLUSION from "../../assets/inclusive.png";
+import HEALTH from "../../assets/Health.png";
+import GENDER from "../../assets/Gender.png";
+import ADVOCACY from "../../assets/advocacy.png";
+
 const HeroSlide = ({ image, title, description, ctaLink, ctaText, isActive, isNext }) => (
   <div 
     className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ${
@@ -13,9 +20,12 @@ const HeroSlide = ({ image, title, description, ctaLink, ctaText, isActive, isNe
   >
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
     <div 
-      className="w-full h-full bg-cover bg-center transform transition-transform duration-10000 ease-out scale-105"
+      className="w-full h-full overflow-hidden"
       style={{ 
         backgroundImage: `url(${image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
         animation: isActive ? 'slowZoom 20s ease-in-out infinite alternate' : 'none'
       }}
     ></div>
@@ -64,42 +74,43 @@ const HeroComponent = () => {
   const [nextSlide, setNextSlide] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [containerHeight, setContainerHeight] = useState("calc(100vh - 80px)");
 
-  // Hero content for each focus area
+  // Hero content for each focus area with proper image positioning
   const heroSlides = [
     {
-      image: "/api/placeholder/1200/600", // Replace with actual image path
+      image: EDUCATION,
       title: "Inclusive Education and Skills Development",
       description: "Empowering communities through accessible education and practical skills training for all, regardless of ability or background.",
-      ctaLink: "/programs/education",
+      ctaLink: "/programs",
       ctaText: "Explore Education Programs"
     },
     {
-      image: "/api/placeholder/1200/600", // Replace with actual image path
+      image: INCLUSION,
       title: "Disability Inclusion",
       description: "Creating equal opportunities and fostering inclusive environments that celebrate and support people of all abilities.",
-      ctaLink: "/programs/disability-inclusion",
+      ctaLink: "/programs",
       ctaText: "Learn About Inclusion"
     },
     {
-      image: "/api/placeholder/1200/600", // Replace with actual image path
+      image: HEALTH,
       title: "Health and Well-being",
       description: "Promoting holistic health practices and providing access to essential services for improved community well-being.",
-      ctaLink: "/programs/health",
+      ctaLink: "/programs",
       ctaText: "Discover Health Initiatives"
     },
     {
-      image: "/api/placeholder/1200/600", // Replace with actual image path
+      image: GENDER,
       title: "Gender Equality",
       description: "Advocating for gender equality and empowering women and girls to reach their full potential in society.",
-      ctaLink: "/programs/gender",
+      ctaLink: "/programs",
       ctaText: "Support Gender Programs"
     },
     {
-      image: "/api/placeholder/1200/600", // Replace with actual image path
+      image: ADVOCACY,
       title: "Rights and Advocacy",
       description: "Championing human rights and amplifying the voices of marginalized communities through advocacy and awareness.",
-      ctaLink: "/programs/advocacy",
+      ctaLink: "/programs",
       ctaText: "Join Our Advocacy Work"
     }
   ];
@@ -154,6 +165,30 @@ const HeroComponent = () => {
     };
   }, []);
 
+  // Adjust height on window resize to ensure proper proportions
+  useEffect(() => {
+    const handleResize = () => {
+      // Ensure the hero maintains proper aspect ratio on different screens
+      const navbarHeight = 80; // Adjust if your navbar height changes
+      const windowHeight = window.innerHeight;
+      const minHeight = 400; // Minimum height to prevent excessive shrinking
+      
+      const calculatedHeight = Math.max(windowHeight - navbarHeight, minHeight);
+      setContainerHeight(`${calculatedHeight}px`);
+    };
+    
+    // Set initial height
+    handleResize();
+    
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   // Handle manual navigation
   const navigateToSlide = (index) => {
     if (isTransitioning || index === activeSlide) return;
@@ -177,10 +212,10 @@ const HeroComponent = () => {
 
   return (
     <div 
-      className="relative w-full overflow-hidden pt-16" // Added pt-16 for navbar space
+      className="relative w-full overflow-hidden"
       style={{ 
-        height: "calc(100vh - 0px)",
-      }} // Adjust if needed based on exact navbar height
+        height: containerHeight,
+      }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       role="region"
@@ -218,14 +253,16 @@ const HeroComponent = () => {
       </div>
 
       {/* Hero Slides */}
-      {heroSlides.map((slide, index) => (
-        <HeroSlide
-          key={index}
-          isActive={activeSlide === index}
-          isNext={nextSlide === index}
-          {...slide}
-        />
-      ))}
+      <div className="w-full h-full relative">
+        {heroSlides.map((slide, index) => (
+          <HeroSlide
+            key={index}
+            isActive={activeSlide === index}
+            isNext={nextSlide === index}
+            {...slide}
+          />
+        ))}
+      </div>
 
       {/* Navigation Dots */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 transform transition-transform duration-500 hover:scale-110">
