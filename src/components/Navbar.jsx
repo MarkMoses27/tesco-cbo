@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import TECSO_LOGO from "../assets/tesco-cbo.svg";
+import TECSO_LOGO from "../assets/tesco-cbo.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
