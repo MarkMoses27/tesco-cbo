@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 import NCPWD from '../../assets/ncpwd.png'
 import kwale from '../../assets/kwale.png'
-import Tinada from '../../assets/tinada.png'
+import Tinada from '../../assets/Tinada.png'
 import GNDR from '../../assets/GNDR.png'
 import K4R from '../../assets/K4R.png' 
 import PYN from '../../assets/PYN.png'
