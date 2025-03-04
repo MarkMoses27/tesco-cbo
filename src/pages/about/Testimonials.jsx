@@ -1,10 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import TestimonialCard from './TestimonialCard';
-import TestimonialModal from './TestimonialModal';
 
-
-//images
+// Images
 import rajab from '../../assets/testimonials/rajab.png';
 import brighton from '../../assets/testimonials/Brighton.png';
 import Rehema from '../../assets/testimonials/Rehema.png';
@@ -22,19 +19,14 @@ const Testimonials = () => {
       title: "A Father's Journey: From Pain to Hope",
       excerpt: "How counseling and support saved a family from disintegration",
       content: `I am Rajab Abdalla, father of two daughters called Binti and Rajab Murabu. Both my girls were born with multiple congenital conditions that left them completely dependent. Binti cannot grow, speak, walk, or even communicate. Her younger sister faces similar challenges, requiring round-the-clock care that left our family in perpetual crisis.
-  
-  For years, we lived in shame and isolation. My wife and I blamed each other constantly, trapped in a cycle of anger and despair. Our community spread vicious rumors that the disabilities resulted from incest, claiming I had relations with my sisters. The stigma destroyed our family relationships and social standing. We stopped attending church, markets, even family gatherings. The stress became so overwhelming that our home became a battleground of shouted accusations and broken dishes.
-  
-  Everything changed when Testimony CBO's outreach team visited our village. They approached us with compassion, not judgment. Through weekly counseling sessions, they helped us understand these were medical conditions, not curses. They taught us how to work together as a team in caregiving. 
-  
-  Testimony CBO provided:
-  - Specialized physical therapy sessions
-  - Medical equipment loans (wheelchair, feeding tubes)
-  - Nutritional supplements and meal plans
-  - Education sponsorship for both girls
-  - Parental training workshops
-  
-  The transformation has been miraculous. Where we once saw only burden, we now celebrate small victories - Binti's first intentional smile, her sister's improved grip strength. Our marriage has been reborn through shared purpose. We've even become advocates, speaking at community meetings to combat disability stigma. As my wife says: "We went from hiding our girls to celebrating their unique light."`,
+
+      For years, we lived in shame and isolation. My wife and I blamed each other constantly, trapped in a cycle of anger and despair. Our community spread vicious rumors that the disabilities resulted from incest, claiming I had relations with my sisters. The stigma destroyed our family relationships and social standing. We stopped attending church, markets, even family gatherings. The stress became so overwhelming that our home became a battleground of shouted accusations and broken dishes.
+      
+      Everything changed when Testimony CBO's outreach team visited our village. They approached us with compassion, not judgment. Through weekly counseling sessions, they helped us understand these were medical conditions, not curses. They taught us how to work together as a team in caregiving. 
+      
+      Testimony CBO provided specialized physical therapy sessions, medical equipment loans including wheelchairs and feeding tubes, nutritional supplements and meal plans, education sponsorship for both girls, and parental training workshops.
+      
+      The transformation has been miraculous. Where we once saw only burden, we now celebrate small victories - Binti's first intentional smile, her sister's improved grip strength. Our marriage has been reborn through shared purpose. We've even become advocates, speaking at community meetings to combat disability stigma. As my wife says: "We went from hiding our girls to celebrating their unique light."`,
       category: 'family-support',
       author: 'Rajab Abdalla',
       date: '2024-03-15'
@@ -45,14 +37,10 @@ const Testimonials = () => {
       title: "Brighton's Battle: A Story of Hope and Healing",
       excerpt: "Emergency surgery gives infant a fighting chance",
       content: `When Brighton was born with rapidly progressing hydrocephalus, his young parents faced every parent's worst nightmare. His head circumference grew at alarming rates - 2cm per week - threatening brain damage. Traditional herbal remedies failed, and local hospitals lacked neurosurgical capacity.
-  
-  Testimony CBO's emergency response:
-  1. Rushed referral to Bethany Kids Hospital
-  2. Funded VP shunt surgery (3.2 million KES)
-  3. Provided 6-month post-op care package
-  4. Connected family to parent support group
-  
-  The 8-hour surgery was successful. At 18 months old, Brighton is hitting developmental milestones - sitting unaided, babbling, and recognizing family members. His mother Mary now volunteers as a TESCO parent ambassador: "That shunt isn't just medical plastic - it's a lifeline. TESCO didn't just save Brighton; they saved our family from disintegration. We're paying it forward by helping 7 other families access care."`,
+      
+      Testimony CBO's emergency response included rushing him to Bethany Kids Hospital, funding VP shunt surgery costing 3.2 million KES, providing a 6-month post-op care package, and connecting the family to a parent support group.
+      
+      The 8-hour surgery was successful. At 18 months old, Brighton is hitting developmental milestones - sitting unaided, babbling, and recognizing family members. His mother Mary now volunteers as a TESCO parent ambassador: "That shunt isn't just medical plastic - it's a lifeline. TESCO didn't just save Brighton; they saved our family from disintegration. We're paying it forward by helping 7 other families access care."`,
       category: 'medical',
       author: 'Medical Team',
       date: '2024-02-10'
@@ -63,14 +51,10 @@ const Testimonials = () => {
       title: "Rehema's Triumph: Breaking Barriers",
       excerpt: "Blind girl's educational triumph against all odds",
       content: `Rehema lost her sight to measles at age 3. When her father abandoned the family, blaming her disability, she dropped out of school after just one year. For a decade, she remained homebound - until Testimony CBO's community scouts identified her case during a door-to-door survey.
-  
-  Our comprehensive intervention:
-  ✓ Braille literacy training (now reading Grade 2 level)
-  ✓ Orientation & mobility training with white cane
-  ✓ Family counseling to reconcile parents
-  ✓ Community sensitization workshops
-  
-  At 17, Rehema excels academically (top 10% class rank) and leads the school choir. Her mother Wanjiku shares: "I cried when she read me braille letters. My daughter who I carried like a baby now teaches me!" Rehema aims to become Kenya's first blind Supreme Court Justice, proving disability ≠ inability.`,
+      
+      Our comprehensive intervention included a full scholarship to Thika School for the Blind, braille literacy training (she's now reading at Grade 2 level), orientation and mobility training with a white cane, family counseling to reconcile parents, and community sensitization workshops.
+      
+      At 17, Rehema excels academically (top 10% class rank) and leads the school choir. Her mother Wanjiku shares: "I cried when she read me braille letters. My daughter who I carried like a baby now teaches me!" Rehema aims to become Kenya's first blind Supreme Court Justice, proving disability is not inability.`,
       category: 'education',
       author: 'Education Team',
       date: '2024-01-20'
@@ -81,20 +65,10 @@ const Testimonials = () => {
       title: "Khadija: From Stigma to Empowerment",
       excerpt: "Breaking myths about mental health and epilepsy",
       content: `Khadija's epilepsy and intellectual disability made her a target for abuse. Her mother exhausted their savings on witch doctors who declared her "possessed." Neighbors barred their children from playing with her, and local schools refused admission.
-  
-  TESCO's holistic approach:
-  1. Medical: Proper diagnosis & anticonvulsant regimen
-  2. Educational: Ndiohivyo Special School placement
-  3. Social: Stigma reduction workshops
-  4. Economic: Mother's tailoring microgrant
-  
-  Transformative results:
-  - 22 months seizure-free
-  - Reads at 3rd-grade level
-  - Leads class in math drills
-  - Mother employs 3 other parents
-  
-  Khadija proudly states: "I'm not sick - I'm special. My brain just dances differently!" Her success inspired 7 families to seek help for disabled children.`,
+      
+      TESCO's holistic approach included proper medical diagnosis and anticonvulsant regimen, placement at Ndiohivyo Special School, stigma reduction workshops, and a tailoring microgrant for her mother.
+      
+      The transformative results: 22 months seizure-free, reading at 3rd-grade level, leading class in math drills, and her mother now employs 3 other parents. Khadija proudly states: "I'm not sick - I'm special. My brain just dances differently!" Her success inspired 7 families to seek help for disabled children.`,
       category: 'stigma',
       author: 'Community Team',
       date: '2023-11-15'
@@ -104,19 +78,11 @@ const Testimonials = () => {
       image: rajab,
       title: "A Village Reborn in Inclusion",
       excerpt: "Community rejects stigma, embraces diversity",
-      content: `In coastal region, 72% of disabled children were hidden in homes. TESCO launched:
-  • Monthly mobile disability clinics
-  • Interfaith leader training program
-  • School inclusion initiatives
-  • Parent advocate network
-  
-  Remarkable outcomes:
-  → 312 children enrolled in schools
-  → 15 churches/mosques established special needs units
-  → Traditional healers became referral partners
-  → Disability birth registrations increased 400%
-  
-  Village elder Mwangi summarizes: "We thought disability meant uselessness. Now we see these children as teachers of patience. Our blind children read braille, our deaf youth dance to vibrations - they've shown us new ways to experience the world."`,
+      content: `In coastal region, 72% of disabled children were hidden in homes. TESCO launched monthly mobile disability clinics, interfaith leader training programs, school inclusion initiatives, and parent advocate networks.
+      
+      Remarkable outcomes include 312 children enrolled in schools, 15 churches/mosques establishing special needs units, traditional healers becoming referral partners, and disability birth registrations increasing by 400%.
+      
+      Village elder Mwangi summarizes: "We thought disability meant uselessness. Now we see these children as teachers of patience. Our blind children read braille, our deaf youth dance to vibrations - they've shown us new ways to experience the world."`,
       category: 'community',
       author: 'Advocacy Team',
       date: '2023-10-20'
@@ -136,7 +102,21 @@ const Testimonials = () => {
         </p>
       </div>
 
-      {/* Filters remain unchanged */}
+      <div className="mb-8 flex flex-wrap gap-4 justify-center">
+        {['all', 'family-support', 'medical', 'education', 'stigma', 'community'].map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setSelectedCategory(cat)}
+            className={`px-6 py-2 rounded-full text-sm font-medium ${
+              selectedCategory === cat
+                ? 'bg-blue-800 text-white'
+                : 'bg-blue-50 text-blue-800 hover:bg-blue-100'
+            } transition-colors capitalize`}
+          >
+            {cat.replace('-', ' ')}
+          </button>
+        ))}
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredTestimonials.map((testimonial) => (
@@ -148,10 +128,9 @@ const Testimonials = () => {
         ))}
       </div>
 
-      {/* CTA Section */}
       <div className="mt-16 text-center bg-blue-50 rounded-xl py-12 px-4">
         <h2 className="text-3xl font-bold text-blue-800 mb-4">Be Part of the Next Miracle</h2>
-        <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+        <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg">
           Your support writes new chapters of hope. Choose your impact:
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -182,6 +161,90 @@ const Testimonials = () => {
           onClose={() => setSelectedStory(null)}
         />
       )}
+    </div>
+  );
+};
+
+const TestimonialCard = ({ testimonial, onOpenModal }) => (
+  <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+    <div className="relative aspect-video bg-gray-50 flex items-center justify-center">
+      <img 
+        src={testimonial.image} 
+        alt={testimonial.title} 
+        className="w-full h-full object-contain p-2"
+        loading="lazy"
+      />
+      <span className="absolute top-2 right-2 bg-white/80 px-2 py-1 text-sm rounded-full">
+        {new Date(testimonial.date).toLocaleDateString()}
+      </span>
+    </div>
+    <div className="p-6 flex-1 flex flex-col">
+      <div className="flex items-center justify-between mb-4">
+        <span className="inline-block px-3 py-1 text-sm font-semibold text-blue-800 bg-blue-100 rounded-full">
+          {testimonial.category.replace('-', ' ')}
+        </span>
+        <span className="text-sm text-gray-500">By {testimonial.author}</span>
+      </div>
+      <h3 className="text-xl font-bold text-gray-800 mb-2">{testimonial.title}</h3>
+      <p className="text-gray-600 mb-4 flex-1">{testimonial.excerpt}</p>
+      <button
+        onClick={() => onOpenModal(testimonial)}
+        className="text-blue-800 font-semibold hover:underline flex items-center self-start"
+      >
+        Read Full Story
+        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+);
+
+const TestimonialModal = ({ story, onClose }) => {
+  const formatContent = (content) => {
+    return content.split('\n\n').map((paragraph, index) => (
+      <p key={index} className="mb-4 text-gray-700 leading-relaxed text-lg">
+        {paragraph}
+      </p>
+    ));
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="relative">
+          <div className="bg-gray-50 p-4 flex items-center justify-center">
+            <img 
+              src={story.image} 
+              alt={story.title} 
+              className="max-h-[70vh] w-auto object-contain"
+            />
+          </div>
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 text-white bg-black/50 hover:bg-black/75 rounded-full p-2 transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        <div className="p-8">
+          <div className="mb-6">
+            <h2 className="text-3xl font-bold text-blue-800 mb-2">{story.title}</h2>
+            <div className="flex items-center gap-4 text-gray-600 mb-4">
+              <span className="font-medium">By {story.author}</span>
+              <span className="text-sm">•</span>
+              <span className="text-sm">{new Date(story.date).toLocaleDateString()}</span>
+            </div>
+          </div>
+
+          <div className="prose max-w-none">
+            {formatContent(story.content)}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 //images
 import EDUCATION from "../../assets/education.png";
-import INCLUSION from "../../assets/Inclusive.png";
+import RIGHTS from "../../assets/right-advocacy.png";
 import HEALTH from "../../assets/Health.png";
-import GENDER from "../../assets/Gender.png";
+import GENDER from "../../assets/gende-equality.png";
+import INCLUSION from "../../assets/Inclusion-disability.png";
 
 const HeroSlide = ({ image, title, description, ctaLink, ctaText, isActive, isNext }) => (
   <div 
@@ -106,7 +107,7 @@ const HeroComponent = () => {
       ctaText: "Support Gender Programs"
     },
     {
-      image: GENDER,
+      image: RIGHTS,
       title: "Rights and Advocacy",
       description: "Championing human rights and amplifying the voices of marginalized communities through advocacy and awareness.",
       ctaLink: "/programs",

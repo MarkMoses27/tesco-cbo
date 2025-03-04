@@ -6,6 +6,7 @@ import Homepage from './components/Homepage';
 import Footer from './components/Footer';
 import History from './pages/about/History';
 import OurTeam from './pages/about/Team';
+import BOARD_MEMBERS from './pages/about/BoardMembers'; // Add BoardMembers component import
 import Testimonials from './pages/about/Testimonials';
 import Programs from './pages/Programs';
 import PrivacyPolicy from './components/PrivacyPolicy';
@@ -71,6 +72,20 @@ const AnimatedRoutes = () => {
               <History />
             </motion.div>
           }
+        />
+        <Route
+          path="/about/board-members"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={pageVariants}
+              transition={{ duration: 0.3 }}
+            >
+              <BOARD_MEMBERS />
+            </motion.div> 
+          } 
         />
         <Route
           path="/about/testimonials"

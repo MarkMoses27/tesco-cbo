@@ -50,6 +50,7 @@ const Navbar = () => {
       items: [
         { name: "Our History", path: "/about/history" },
         { name: "Our Team", path: "/about/our-team" },
+        { name: "Board Members", path: "/about/board-members" }, 
         { name: "Testimonials", path: "/about/testimonials" },
       ]
     },
