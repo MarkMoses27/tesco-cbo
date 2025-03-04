@@ -80,11 +80,14 @@ Together, we are creating an inclusive environment- breaking barriers and touchi
       image: rajab,
       title: "A Village Reborn in Inclusion",
       excerpt: "Community rejects stigma, embraces diversity",
-      content: `In coastal region, 72% of disabled children were hidden in homes. TESCO launched monthly mobile disability clinics, interfaith leader training programs, school inclusion initiatives, and parent advocate networks.
-      
-      Remarkable outcomes include 312 children enrolled in schools, 15 churches/mosques establishing special needs units, traditional healers becoming referral partners, and disability birth registrations increasing by 400%.
-      
-      Village elder Mwangi summarizes: "We thought disability meant uselessness. Now we see these children as teachers of patience. Our blind children read braille, our deaf youth dance to vibrations - they've shown us new ways to experience the world."`,
+      content: `Transforming Lives with Education and Care
+At Testimony Community Based Organization, we consider education and inclusion as powerful enablers of lives to change. One of our most remarkable successes was when we met an 18-year-old boy with mental disabilities, who had never been to school because of the condition and severely lacked support-feeding on his own waste. The situation was tears patronizing, yet potential was spotted, and we acted.
+
+He has been enrolled in a special school with sponsorship, and he is now significantly better. Learning life skills, gaining more confidence, and making progress not thought possible. This journey provides hope for a brighter future.
+
+There is also a 13-year-old sibling who has multiple disabilities and had also never been to school. Now, she is being educated and provided with the care that she rightfully deserved. We have paid for her whole education with all the necessary support in place for her optimum growth and development.
+
+This is just a glimpse of how many lives we are changing through our mission of disability inclusive education and empowerment. The organization does not stop creating an opportunity for every child irrespective of ability to realize their full development."`,
       category: 'community',
       author: 'Advocacy Team',
       date: '2022-10-20'
