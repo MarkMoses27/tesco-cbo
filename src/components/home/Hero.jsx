@@ -6,7 +6,7 @@ import EDUCATION from "../../assets/education.png";
 import RIGHTS from "../../assets/right-advocacy.png";
 import HEALTH from "../../assets/Health.png";
 import GENDER from "../../assets/gende-equality.png";
-import INCLUSION from "../../assets/Inclusion-disability.png";
+import INCLUSION from "../../assets/inclusion-disability.png";
 
 const HeroSlide = ({ image, title, description, ctaLink, ctaText, isActive, isNext }) => (
   <div 
