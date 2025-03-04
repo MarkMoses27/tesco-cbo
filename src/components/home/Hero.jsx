@@ -6,7 +6,6 @@ import EDUCATION from "../../assets/education.png";
 import INCLUSION from "../../assets/Inclusive.png";
 import HEALTH from "../../assets/Health.png";
 import GENDER from "../../assets/Gender.png";
-import ADVOCACY from "../../assets/advocacy.png";
 
 const HeroSlide = ({ image, title, description, ctaLink, ctaText, isActive, isNext }) => (
   <div 
@@ -100,14 +99,14 @@ const HeroComponent = () => {
       ctaText: "Discover Health Initiatives"
     },
     {
-      image: GENDER,
+      image: GENDER, // we need change remember
       title: "Gender Equality",
       description: "Advocating for gender equality and empowering women and girls to reach their full potential in society.",
       ctaLink: "/programs",
       ctaText: "Support Gender Programs"
     },
     {
-      image: ADVOCACY,
+      image: GENDER,
       title: "Rights and Advocacy",
       description: "Championing human rights and amplifying the voices of marginalized communities through advocacy and awareness.",
       ctaLink: "/programs",

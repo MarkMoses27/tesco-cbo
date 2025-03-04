@@ -19,6 +19,15 @@ const TestimonialCard = ({ testimonial, onOpenModal }) => {
         isExpanded ? 'md:col-span-2 lg:col-span-3' : 'hover:shadow-xl'
       }`}
     >
+      {/* Image Section */}
+      <div className="w-full h-60 mb-4 overflow-hidden rounded-lg">
+        <img 
+          src={testimonial.image} 
+          alt={testimonial.title} 
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       <div onClick={handleClick} className="cursor-pointer">
         <h3 className="text-xl font-bold text-blue-800 mb-4">
           {testimonial.title}

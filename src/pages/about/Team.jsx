@@ -26,7 +26,7 @@ const Team = () => {
       details: {
         qualifications: [
           'Sociology & Community Development background',
-          '20+ years community empowerment experience',
+          '10+ years community empowerment experience',
           'Disability Rights Advocacy training'
         ],
         achievements: [
@@ -46,7 +46,7 @@ const Team = () => {
       details: {
         qualifications: [
           'CPA from Technical University of Mombasa',
-          '10+ years financial management',
+          '20+ years financial management',
           'Budget optimization specialist'
         ],
         achievements: [
@@ -120,7 +120,7 @@ const Team = () => {
     {
       id: 6,
       name: 'Eunice Okoth',
-      role: 'Gender Officer',
+      role: 'Pyschologist and Programs Coordinator',
       image: euniceakoth, 
       bio: 'Focuses on GBV prevention and mental health support.',
       details: {

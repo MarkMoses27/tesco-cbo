@@ -1,6 +1,5 @@
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
-import VIOLET_PORTRAIT from '../../assets/violet.png';
 import COMMUNITY_IMAGE from '../../assets/community.png';
 
 const Counter = ({ value, suffix, label }) => {
@@ -49,7 +48,7 @@ const AboutTesco = () => {
           <div className="order-1 md:order-2 relative group">
             <div className="relative aspect-[3/4] w-full max-w-[500px] mx-auto shadow-2xl rounded-2xl overflow-hidden">
               <img 
-                src={VIOLET_PORTRAIT} 
+                src="#" 
                 alt="Violet Ogutu, TESCO Founder"
                 className="w-full h-full object-cover transform transition duration-300 group-hover:scale-105"
               />

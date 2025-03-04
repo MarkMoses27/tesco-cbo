@@ -154,15 +154,23 @@ const MissionVisionValues = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-[var(--accent-color)] mr-2 mt-1">✓</span>
-                    <span>Provide immediate support and intervention for 500+ vulnerable individuals annually</span>
+                    <span>Expand Outreach & Awareness Campaigns </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--accent-color)] mr-2 mt-1">✓</span>
-                    <span>Develop comprehensive rehabilitation programs for GBV survivors</span>
+                    <span>Increase Access to Essential Services </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--accent-color)] mr-2 mt-1">✓</span>
-                    <span>Establish vocational training opportunities for young mothers</span>
+                    <span>Enhance Education & Skills Training</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[var(--accent-color)] mr-2 mt-1">✓</span>
+                    <span>Strengthen Organizational Capacity                    </span>
+                  </li><li className="flex items-start">
+                    <span className="text-[var(--accent-color)] mr-2 mt-1">✓</span>
+                    <span>Pilot Climate Resilience Initiatives
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -171,15 +179,31 @@ const MissionVisionValues = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-[var(--primary-color)] mr-2 mt-1">✓</span>
-                    <span>Create sustainable community support systems that function independently</span>
+                    <span>Establish a Resource & Rehabilitation Center
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--primary-color)] mr-2 mt-1">✓</span>
-                    <span>Advocate for policy changes that protect vulnerable populations</span>
+                    <span>Build a fully equipped center offering therapy, counseling, vocational training, and safe shelter for vulnerable individuals.
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--primary-color)] mr-2 mt-1">✓</span>
-                    <span>Develop a replicable model for community-based intervention programs</span>
+                    <span>Scale Up Education & Economic Empowerment Programs
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[var(--primary-color)] mr-2 mt-1">✓</span>
+                    <span>Advocate for Policy Change & Systemic Reforms
+                    </span>
+                  </li>  <li className="flex items-start">
+                    <span className="text-[var(--primary-color)] mr-2 mt-1">✓</span>
+                    <span>Expand Healthcare & Mental Health Support
+                    </span>
+                  </li>  <li className="flex items-start">
+                    <span className="text-[var(--primary-color)] mr-2 mt-1">✓</span>
+                    <span>Develop Sustainable Climate & Disaster Resilience Programs.
+                    </span>
                   </li>
                 </ul>
               </div>
