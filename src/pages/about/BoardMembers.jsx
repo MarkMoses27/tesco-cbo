@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 // Import board member images
 import Winnie from '../../assets/board-members/winnie.png';
@@ -7,6 +6,7 @@ import Violet from '../../assets/board-members/violet-ogutu.png';
 import Ruth from '../../assets/board-members/ruth-chege.png';
 import Alice from '../../assets/board-members/alice.png';
 import Christopher from '../../assets/board-members/mapesa.png';
+import Bosire from '../../assets/board-members/bosire.png'
 
 const BoardMembers = () => {
   const [expandedMember, setExpandedMember] = useState(null);
@@ -67,6 +67,13 @@ With a strong belief in equal rights and opportunities, Christopher actively wor
 
 Through his service and leadership, Christopher continues to be a champion for justice and inclusion, ensuring that persons with disabilities are recognized, valued, and fully integrated into society.`,
     },
+    {
+        id: 6,
+        image: Bosire, 
+        name: 'Dr. Bosire Duke Otwori',
+        role: 'Board Member & Health Program Coordinator',
+        bio: `Dr. Bosire Duke Otwori is a dedicated healthcare professional and a passionate advocate for health equity, disability inclusion, and sexual and reproductive health and rights (SRHR). As a Board Member and Health Program Coordinator at Testimony Community Based Organization (CBO), he ensures that children, young people with disabilities, and other marginalized groups receive access to quality healthcare, medical follow-ups, and essential SRHR services.\n\nDr. Bosire holds a Diploma in Clinical Medicine and Surgery and a Certificate in Counseling, complemented by numerous specialized short-course trainings in healthcare. With a strong background in clinical practice, he currently serves at BOMU Hospital, where he provides patient-centered care and advocates for comprehensive health services.\n\nHis leadership in health programs focuses on promoting inclusive healthcare, improving access to SRHR education and services, and ensuring that all individuals, regardless of their abilities or backgrounds, have the support they need to lead healthier and more empowered lives.`,
+      }
   ];
 
   return (
