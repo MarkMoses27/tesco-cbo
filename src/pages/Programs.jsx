@@ -206,7 +206,7 @@ const Programs = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { 
-                title: "Youth in Need of Care", 
+                title: "Youths and children of care", 
                 count: "1,200+ Served" 
               },
               { 

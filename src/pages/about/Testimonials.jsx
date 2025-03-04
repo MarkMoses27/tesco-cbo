@@ -29,7 +29,7 @@ const Testimonials = () => {
       The transformation has been miraculous. Where we once saw only burden, we now celebrate small victories - Binti's first intentional smile, her sister's improved grip strength. Our marriage has been reborn through shared purpose. We've even become advocates, speaking at community meetings to combat disability stigma. As my wife says: "We went from hiding our girls to celebrating their unique light."`,
       category: 'family-support',
       author: 'Rajab Abdalla',
-      date: '2024-03-15'
+      date: '2022-03-15'
     },
     {
       id: 2,
@@ -38,26 +38,28 @@ const Testimonials = () => {
       excerpt: "Emergency surgery gives infant a fighting chance",
       content: `When Brighton was born with rapidly progressing hydrocephalus, his young parents faced every parent's worst nightmare. His head circumference grew at alarming rates - 2cm per week - threatening brain damage. Traditional herbal remedies failed, and local hospitals lacked neurosurgical capacity.
       
-      Testimony CBO's emergency response included rushing him to Bethany Kids Hospital, funding VP shunt surgery costing 3.2 million KES, providing a 6-month post-op care package, and connecting the family to a parent support group.
+      Testimony CBO's emergency response included rushing him to Bethany Kids Hospital,, providing a 6-month post-op care package, and connecting the family to a parent support group.
       
       The 8-hour surgery was successful. At 18 months old, Brighton is hitting developmental milestones - sitting unaided, babbling, and recognizing family members. His mother Mary now volunteers as a TESCO parent ambassador: "That shunt isn't just medical plastic - it's a lifeline. TESCO didn't just save Brighton; they saved our family from disintegration. We're paying it forward by helping 7 other families access care."`,
       category: 'medical',
       author: 'Medical Team',
-      date: '2024-02-10'
+      date: '2022-02-10'
     },
     {
       id: 3,
       image: Rehema,
       title: "Rehema's Triumph: Breaking Barriers",
       excerpt: "Blind girl's educational triumph against all odds",
-      content: `Rehema lost her sight to measles at age 3. When her father abandoned the family, blaming her disability, she dropped out of school after just one year. For a decade, she remained homebound - until Testimony CBO's community scouts identified her case during a door-to-door survey.
-      
-      Our comprehensive intervention included a full scholarship to Thika School for the Blind, braille literacy training (she's now reading at Grade 2 level), orientation and mobility training with a white cane, family counseling to reconcile parents, and community sensitization workshops.
-      
-      At 17, Rehema excels academically (top 10% class rank) and leads the school choir. Her mother Wanjiku shares: "I cried when she read me braille letters. My daughter who I carried like a baby now teaches me!" Rehema aims to become Kenya's first blind Supreme Court Justice, proving disability is not inability.`,
+      content: `Bright young Rehema, a totally blind young girl, faced a lot of hardship in life at the beginning. This ordeal caused a great deal of pain when her parents were separated owing to this stigma of disability at home. Though once admitted to school, she had to dropout just one year into her studies due to financial hardships.
+
+For a full decade, Rehema remained out of school-ed until Testimony Community Based Organization intervened. This time, it was not her domestic violence survivor of a mother but through the counselling, psychosocial support, and intervention that we gave when she contacted us. Out of these efforts, we even managed to return Rehema to school on full sponsorship but also involved her family members to demystify the stigma associated with disability.
+
+Currently, we have Rehema doing well in school, and her mother is very thankful to Testimony CBO for restoring hope and the second chance for her daughter with regards to education and future.
+
+Together, we are creating an inclusive environment- breaking barriers and touching lives!.`,
       category: 'education',
       author: 'Education Team',
-      date: '2024-01-20'
+      date: '2023-01-20'
     },
     {
       id: 4,
@@ -71,7 +73,7 @@ const Testimonials = () => {
       The transformative results: 22 months seizure-free, reading at 3rd-grade level, leading class in math drills, and her mother now employs 3 other parents. Khadija proudly states: "I'm not sick - I'm special. My brain just dances differently!" Her success inspired 7 families to seek help for disabled children.`,
       category: 'stigma',
       author: 'Community Team',
-      date: '2023-11-15'
+      date: '2022-11-15'
     },
     {
       id: 5,
@@ -85,7 +87,7 @@ const Testimonials = () => {
       Village elder Mwangi summarizes: "We thought disability meant uselessness. Now we see these children as teachers of patience. Our blind children read braille, our deaf youth dance to vibrations - they've shown us new ways to experience the world."`,
       category: 'community',
       author: 'Advocacy Team',
-      date: '2023-10-20'
+      date: '2022-10-20'
     }
   ];
 

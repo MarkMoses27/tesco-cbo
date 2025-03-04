@@ -30,7 +30,7 @@ const Team = () => {
           'Disability Rights Advocacy training'
         ],
         achievements: [
-          'Founded Testimony CBO in 2015',
+          'Founded Testimony CBO in 2017',
           'Established inclusive vocational programs',
           'Pioneered disability-inclusive policies'
         ],

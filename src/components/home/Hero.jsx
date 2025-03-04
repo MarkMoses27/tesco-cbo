@@ -1,14 +1,14 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
-//images
+// Images
 import EDUCATION from "../../assets/education.png";
 import RIGHTS from "../../assets/right-advocacy.png";
 import HEALTH from "../../assets/Health.png";
 import GENDER from "../../assets/gende-equality.png";
 import INCLUSION from "../../assets/inclusion-disability.png";
 
-const HeroSlide = ({ image, title, description, ctaLink, ctaText, isActive, isNext }) => (
+const HeroSlide = ({ image, title, description, ctaLink, ctaText, isActive, isNext, focalPoint }) => (
   <div 
     className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ${
       isActive 
@@ -24,7 +24,7 @@ const HeroSlide = ({ image, title, description, ctaLink, ctaText, isActive, isNe
       style={{ 
         backgroundImage: `url(${image})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center center',
+        backgroundPosition: focalPoint || 'center top',
         backgroundRepeat: 'no-repeat',
         animation: isActive ? 'slowZoom 20s ease-in-out infinite alternate' : 'none'
       }}
@@ -76,14 +76,14 @@ const HeroComponent = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [containerHeight, setContainerHeight] = useState("calc(100vh - 80px)");
 
-  // Hero content for each focus area with proper image positioning
   const heroSlides = [
     {
       image: EDUCATION,
       title: "Inclusive Education and Skills Development",
       description: "Empowering communities through accessible education and practical skills training for all, regardless of ability or background.",
       ctaLink: "/programs",
-      ctaText: "Explore Education Programs"
+      ctaText: "Explore Education Programs",
+      focalPoint: "center 25%"
     },
     {
       image: INCLUSION,
@@ -100,7 +100,7 @@ const HeroComponent = () => {
       ctaText: "Discover Health Initiatives"
     },
     {
-      image: GENDER, // we need change remember
+      image: GENDER,
       title: "Gender Equality",
       description: "Advocating for gender equality and empowering women and girls to reach their full potential in society.",
       ctaLink: "/programs",
@@ -115,7 +115,6 @@ const HeroComponent = () => {
     }
   ];
 
-  // Function to advance to the next slide with animation
   const goToNextSlide = useCallback(() => {
     if (isTransitioning) return;
     
@@ -123,19 +122,16 @@ const HeroComponent = () => {
     const newActiveSlide = (activeSlide + 1) % heroSlides.length;
     setNextSlide(newActiveSlide);
     
-    // Short delay to trigger animation sequence
     setTimeout(() => {
       setActiveSlide(newActiveSlide);
       setNextSlide((newActiveSlide + 1) % heroSlides.length);
       
-      // Allow time for transition to complete
       setTimeout(() => {
         setIsTransitioning(false);
       }, 1000);
     }, 50);
   }, [activeSlide, heroSlides.length, isTransitioning]);
 
-  // Autoplay effect with animation handling
   useEffect(() => {
     let intervalId;
     
@@ -148,7 +144,6 @@ const HeroComponent = () => {
     };
   }, [isPaused, isTransitioning, goToNextSlide]);
 
-  // Ensure autoplay continues when component becomes visible again
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.visibilityState === 'visible') {
@@ -165,31 +160,23 @@ const HeroComponent = () => {
     };
   }, []);
 
-  // Adjust height on window resize to ensure proper proportions
   useEffect(() => {
     const handleResize = () => {
-      // Ensure the hero maintains proper aspect ratio on different screens
-      const navbarHeight = 80; // Adjust if your navbar height changes
+      const navbarHeight = 80;
       const windowHeight = window.innerHeight;
-      const minHeight = 400; // Minimum height to prevent excessive shrinking
-      
+      const minHeight = 400;
       const calculatedHeight = Math.max(windowHeight - navbarHeight, minHeight);
       setContainerHeight(`${calculatedHeight}px`);
     };
     
-    // Set initial height
     handleResize();
-    
-    // Add event listener
     window.addEventListener('resize', handleResize);
     
-    // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  // Handle manual navigation
   const navigateToSlide = (index) => {
     if (isTransitioning || index === activeSlide) return;
     
@@ -205,17 +192,14 @@ const HeroComponent = () => {
       }, 1000);
     }, 50);
     
-    // Temporarily pause autoplay when user interacts
     setIsPaused(true);
-    setTimeout(() => setIsPaused(false), 10000); // Resume after 10 seconds
+    setTimeout(() => setIsPaused(false), 10000);
   };
 
   return (
     <div 
       className="relative w-full overflow-hidden"
-      style={{ 
-        height: containerHeight,
-      }}
+      style={{ height: containerHeight }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       role="region"
@@ -226,33 +210,28 @@ const HeroComponent = () => {
           from { transform: scale(1); }
           to { transform: scale(1.1); }
         }
-        
         @keyframes float {
           0% { transform: translateY(0px); }
           50% { transform: translateY(-10px); }
           100% { transform: translateY(0px); }
         }
-        
         @keyframes pulse {
           0% { transform: scale(1); }
           50% { transform: scale(1.05); }
           100% { transform: scale(1); }
         }
       `}</style>
-      
-      {/* Progress Bar */}
+
       <div className="absolute top-0 left-0 w-full h-1 bg-gray-700 bg-opacity-50 z-20">
         <div 
           className="h-full bg-blue-500 transition-all duration-100 ease-linear"
           style={{ 
             width: isPaused ? '0%' : '100%', 
-            transitionDuration: isPaused ? '0ms' : '6000ms',
-            transitionProperty: 'width'
+            transitionDuration: isPaused ? '0ms' : '6000ms'
           }}
         ></div>
       </div>
 
-      {/* Hero Slides */}
       <div className="w-full h-full relative">
         {heroSlides.map((slide, index) => (
           <HeroSlide
@@ -264,7 +243,6 @@ const HeroComponent = () => {
         ))}
       </div>
 
-      {/* Navigation Dots */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 transform transition-transform duration-500 hover:scale-110">
         {heroSlides.map((_, index) => (
           <button
@@ -279,12 +257,10 @@ const HeroComponent = () => {
               animation: activeSlide === index ? 'pulse 2s infinite ease-in-out' : 'none'
             }}
             aria-label={`Go to slide ${index + 1}`}
-            aria-pressed={activeSlide === index}
           ></button>
         ))}
       </div>
 
-      {/* Quick Navigation Arrows with Animations */}
       <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 transition-opacity duration-300 opacity-70 hover:opacity-100"
            style={{ animation: 'float 3s infinite ease-in-out' }}>
         <button
