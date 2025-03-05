@@ -6,13 +6,14 @@ import Partners from "./home/Partners";
 
 export default function Homepage() {
   return (
-    <div className="bg-amber-50">
+    <div className="bg-amber-50 overflow-x-hidden w-full max-w-[100vw] box-border">
+      <main className="w-full box-border">
         <Hero />
         <About />
         <MissionVision />
         <FocusAreas />
         <Partners />
-      
+      </main>
     </div>
   )
 }
