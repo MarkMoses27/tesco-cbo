@@ -18,7 +18,8 @@ const Programs = () => {
         "Therapy and rehabilitation for children with disabilities",
         "Mental health awareness campaigns",
         "Preventive care and community health education",
-        "Psychosocial support for emotional challenges"
+        "Psychosocial support for emotional challenges",
+        "Sexual Reproductive Health Rights ( SRHR ) services"
       ],
       color: "bg-blue-100"
     },
