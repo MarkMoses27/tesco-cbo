@@ -8,3 +8,25 @@
   --white: #ffffff;
 
 }
+
+
+.prose {
+  h2 {
+    @apply text-3xl font-bold mt-12 mb-6;
+  }
+
+  ul {
+    @apply space-y-4 pl-6;
+    li {
+      @apply relative pl-6;
+      &:before {
+        content: '•';
+        @apply absolute left-0 text-blue-600;
+      }
+    }
+  }
+
+  blockquote {
+    @apply border-l-4 border-blue-600 pl-6 my-8 italic text-gray-700 bg-blue-50 p-6 rounded-xl;
+  }
+}

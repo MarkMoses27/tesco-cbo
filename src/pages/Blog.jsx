@@ -2,15 +2,14 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import BeachCleanup from "../assets/blog/cleaning-msa.png";
+import DianiCP from "../assets/blog/dianicp.png";
+import Awareness from "../assets/blog/awareness.png";
 
 const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-      when: "beforeChildren"
-    }
+    transition: { staggerChildren: 0.3, when: "beforeChildren" }
   }
 };
 
@@ -20,12 +19,7 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     rotateY: 0,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 20,
-      mass: 0.5
-    }
+    transition: { type: "spring", stiffness: 100, damping: 20, mass: 0.5 }
   }
 };
 
@@ -34,16 +28,36 @@ const Blog = () => {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
+  // Using string IDs for consistency. To add another blog post, simply add another object here.
   const placeholderPosts = [
     {
-      id: 1,
+      id: "1",
       title: "Mombasa Beach Cleanup: A Day of Collective Impact",
       excerpt: "Community unites to preserve Kenya's coastline through massive cleanup initiative",
       date: "February 28, 2025",
       category: "Volunteering",
       categoryColor: "bg-emerald-500",
       image: BeachCleanup
-    }
+    },
+    {
+      id: "2",
+      title: "A Heartfelt Celebration: World Cerebral Palsy Day at Diani CP Center",
+      excerpt: "Empowering children with CP and their families through education and advocacy",
+      date: "October 3, 2023",
+      category: "Events",
+      categoryColor: "bg-rose-500",
+      image: DianiCP
+    },
+    {
+      id: "3",
+      title: "Empowering Voices: SRHR Training for the Deaf at Kwale School for the Deaf",
+      excerpt: "Breaking barriers to sexual health education for the deaf community in Kenya",
+      date: "September 22, 2023",
+      category: "Education",
+      categoryColor: "bg-indigo-500",
+      image: Awareness
+    },
+    
   ];
 
   return (
@@ -56,7 +70,7 @@ const Blog = () => {
     >
       {/* Background elements */}
       <motion.div style={{ y }} className="absolute inset-0 -z-10 opacity-10">
-        {/* ... existing background elements ... */}
+        {/* ... background elements can go here ... */}
       </motion.div>
 
       {/* Header */}
@@ -89,13 +103,14 @@ const Blog = () => {
             <Link 
               to={`/blog/${post.id}`} 
               className="block h-full p-6"
-              state={{ post }} // Pass post data through state
+              state={{ post }} // Pass post data through state if needed
             >
-              <div className="h-72 overflow-hidden rounded-xl">
+              {/* Image container with fixed aspect ratio */}
+              <div className="w-full aspect-video bg-gray-100 flex items-center justify-center rounded-xl overflow-hidden">
                 <img 
                   src={post.image} 
                   alt={post.title}
-                  className="w-full h-full object-cover"
+                  className="max-w-full max-h-full object-contain"
                   loading="lazy"
                 />
               </div>

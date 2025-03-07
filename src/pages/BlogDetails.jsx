@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useParams } from 'react-router-dom';
 import BeachCleanup from "../assets/blog/cleaning-msa.png";
+import DianiCP from "../assets/blog/dianicp.png";
+import Awareness from "../assets/blog/awareness.png";
 
-// Sample blog posts data
+// Sample blog posts data with consistent string IDs. To add another blog post, include another object here.
 const BLOG_POSTS = [
   {
     id: "1",
@@ -58,7 +60,81 @@ const BLOG_POSTS = [
       <p>#MombasaBeachCleanup #CommunityAction #SustainableFuture</p>
     `
   },
-  // Add more blog posts as needed
+  {
+    id: "2",
+    title: "A Heartfelt Celebration: World Cerebral Palsy Day at Diani CP Center",
+    category: "Events",
+    categoryColor: "bg-rose-500",
+    date: "October 3, 2023",
+    image: DianiCP,
+    excerpt: "Empowering children with CP and their families through education and advocacy",
+    content: `
+      <h2>Empowering Children, Celebrating Abilities</h2>
+      <p>On a sunny morning in Diani, the <strong>Diani Cerebral Palsy Center</strong> was abuzz with excitement and joy. Families, educators, and community members gathered to celebrate <strong>World Cerebral Palsy Day</strong> and honor the strength and resilience of children with CP.</p>
+      
+      <blockquote><em>"This event is a testament to the incredible spirit of these children and their families. It's a day of celebration, awareness, and advocacy for a more inclusive society,"</em> remarked the center's director.</blockquote>
+      
+      <h2>A Day of Inspiration and Education</h2>
+      <p>The day's program featured a variety of activities designed to engage, educate, and uplift attendees:</p>
+      
+      <ul>
+        <li><strong>Art Exhibition:</strong> Children showcased their artistic talents through paintings, drawings, and crafts, highlighting their creativity and unique perspectives.</li>
+        <li><strong>Interactive Workshops:</strong> Parents and caregivers participated in workshops on caregiving, therapy techniques, and community resources to support children with CP.</li>
+        <li><strong>Outdoor Games:</strong> Kids enjoyed fun games and activities that promoted physical activity, social interaction, and teamwork.</li>
+      </ul>
+      
+      <p>These activities not only provided a platform for children to express themselves but also fostered a sense of community and understanding among attendees.</p>
+      
+      <h2>Advocacy and Awareness</h2>
+      <p>World Cerebral Palsy Day is more than just a celebration—it's an opportunity to raise awareness and advocate for the rights and well-being of individuals with CP. The event featured:</p>
+      
+      <ul>
+        <li><strong>Guest Speakers:</strong> Experts in the field of cerebral palsy shared insights on the latest research, therapies, and inclusive practices for children with CP.</li>
+        <li><strong>Parent Testimonials:</strong> Families shared their experiences, challenges, and triumphs, inspiring others and fostering a sense of solidarity.</li>
+        <li><strong>Community Engagement:</strong> Local organizations and volunteers pledged their support for ongoing initiatives to promote inclusivity and accessibility.</li>
+      </ul>
+      
+      <p>By coming together to celebrate World Cerebral Palsy Day, the Diani community reaffirmed its commitment to creating a more inclusive and supportive environment for all.</p>
+    `
+  },
+  {
+    id: "3",
+    title: "Empowering Voices: SRHR Training for the Deaf at Kwale School for the Deaf",
+    category: "Education",
+    categoryColor: "bg-indigo-500",
+    date: "September 22, 2023",
+    image: Awareness,
+    excerpt: "Breaking barriers to sexual health education for the deaf community in Kenya",
+    content:`<h2>Breaking Barriers, Building Knowledge</h2>
+
+  <p>On 22nd September 2023, the Kwale School for the Deaf buzzed with energy and inspiration during a very special training session on Sexual and Reproductive Health and Rights (SRHR). The day was dedicated to empowering the deaf community with essential knowledge, practical skills, and a platform to share experiences—all delivered in a supportive and inclusive environment.</p>
+
+  <h2>A Day of Learning and Empowerment</h2>
+  <p>From the very start, the training set a warm and engaging tone. Participants arrived eager to learn and connect, with trainers ensuring that every session was accessible and tailored to the unique needs of the deaf community. Using skilled sign language interpreters and interactive teaching methods, the facilitators broke down complex SRHR topics into clear, relatable concepts.</p>
+  
+  <p>The training covered a wide range of topics—from understanding personal health and well-being to discussions about safe practices, rights, and self-advocacy. It wasn’t just about imparting information; it was about building confidence and ensuring that everyone left with a stronger voice to express their health needs.</p>
+  
+  <h2>Interactive Sessions and Real Conversations</h2>
+  <p>One of the highlights of the day was the series of interactive sessions. These weren’t your typical lectures—participants were encouraged to ask questions, share personal experiences, and engage in open discussions. This approach created a comfortable space where everyone felt heard and respected.</p>
+  
+  <ul>
+    <li><strong>Clear Communication:</strong> Expert trainers used visual aids and real-time sign language interpretation to make sure that everyone could follow along without missing a detail.</li>
+    <li><strong>Q&A Sessions:</strong> The open forum allowed participants to ask questions and clarify doubts, turning the training into a vibrant dialogue rather than a one-way lecture.</li>
+    <li><strong>Practical Insights:</strong> Trainers shared everyday tips on managing personal health, understanding body rights, and accessing local resources, which were especially valuable for those navigating the complexities of the healthcare system.</li>
+  </ul>
+  
+  <h2>Celebrating Community and Resilience</h2>
+  <p>What truly made the day memorable was the spirit of community that shone through every interaction. The training was not just about health education—it was a celebration of the resilience and determination of the deaf community. Participants bonded over shared experiences and came away feeling more connected, supported, and ready to advocate for their rights.</p>
+  
+  <blockquote>
+    <p>“Today was not just about learning, but about realizing that we have the power to take control of our health and our futures. I left feeling confident and empowered.”</p>
+  </blockquote>
+  
+  <p>These heartfelt words echoed throughout the day, reinforcing the belief that when knowledge meets compassion, incredible transformations occur.</p>
+  
+  <h2>Looking to the Future</h2>
+  <p>As the training concluded, the energy in the room was palpable. Participants expressed their gratitude for the opportunity to gain valuable insights into SRHR, and many looked forward to future sessions that would continue to build on this foundation.</p>`
+  }
 ];
 
 const BlogDetails = () => {
@@ -66,15 +142,14 @@ const BlogDetails = () => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [shareUrl, setShareUrl] = useState("");
-  
+
   useEffect(() => {
-    // Get the current URL for sharing
+    // Set the current URL for sharing
     setShareUrl(window.location.href);
-    
-    // Function to fetch the blog post data based on the ID
+
+    // Fetch the blog post based on the ID from the URL
     const fetchPost = async () => {
       try {
-        // For demonstration, we're using the local BLOG_POSTS array:
         const foundPost = BLOG_POSTS.find(post => post.id === id);
         setPost(foundPost);
       } catch (error) {
@@ -86,14 +161,14 @@ const BlogDetails = () => {
 
     fetchPost();
   }, [id]);
-  
+
   // Function to handle social media sharing
   const handleShare = (platform) => {
     const encodedUrl = encodeURIComponent(shareUrl);
     const encodedTitle = encodeURIComponent(post?.title || "Check out this blog post");
-    
+
     let shareLink = "";
-    
+
     switch (platform) {
       case "facebook":
         shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
@@ -107,12 +182,11 @@ const BlogDetails = () => {
       default:
         return;
     }
-    
+
     // Open share dialog in a new window
     window.open(shareLink, "_blank", "width=600,height=400");
   };
 
-  // Show loading state while fetching
   if (loading) {
     return (
       <div className="min-h-screen pt-24 flex justify-center items-start">
@@ -121,7 +195,6 @@ const BlogDetails = () => {
     );
   }
 
-  // Show error state if post not found
   if (!post) {
     return (
       <div className="min-h-screen pt-24 text-center">
@@ -165,11 +238,14 @@ const BlogDetails = () => {
           </div>
         </header>
 
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full h-96 object-cover rounded-xl mb-12"
-        />
+        {/* Image container with consistent styling */}
+        <div className="w-full aspect-video bg-gray-100 flex items-center justify-center rounded-xl overflow-hidden mb-12">
+          <img
+            src={post.image}
+            alt={post.title}
+            className="max-w-full max-h-full object-contain"
+          />
+        </div>
 
         {/* Blog post content */}
         <section 
