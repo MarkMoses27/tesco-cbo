@@ -15,6 +15,7 @@ import AccessibilityPolicy from './components/Accessibility';
 import Volunteer from './pages/Volunteer'; // Add Volunteer component import
 import Donate from './pages/Donate'; // Add Donate component import
 import Blog from './pages/Blog'; // Add Blog component import
+import BlogDetails from './pages/BlogDetails'; // Add BlogDetails component import
 import Contact from './pages/Contact'; // Add Contact component import
 
 // Scroll restoration component
@@ -200,7 +201,7 @@ const AnimatedRoutes = () => {
   }
 />
 
-        <Route
+<Route
   path="/blog"
   element={
     <motion.div
@@ -212,6 +213,20 @@ const AnimatedRoutes = () => {
     >
       <Blog />
     </motion.div>
+  }
+/>
+<Route
+  path="/blog/:id"
+  element={
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={{ duration: 0.3 }}
+    >
+      <BlogDetails />
+    </motion.div> 
   }
 />
         {/* Add Contact route */}
