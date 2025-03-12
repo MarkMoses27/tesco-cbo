@@ -4,6 +4,9 @@ import { useRef } from 'react';
 import BeachCleanup from "../assets/blog/cleaning-msa.png";
 import DianiCP from "../assets/blog/dianicp.png";
 import Awareness from "../assets/blog/awareness.png";
+import Symposium from "../assets/blog/symposium.png";
+import Disability from "../assets/blog/disability.png";
+import OFFICE_LAUNCH from "../assets/blog/launch.png";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -57,7 +60,36 @@ const Blog = () => {
       categoryColor: "bg-indigo-500",
       image: Awareness
     },
-    
+
+    {
+      id:4,
+      title: "Celebrating the 10th National Symposium on Disaster and Risk Reduction in Kilifi County",
+      excerpt: "Stakeholders gather to discuss strategies for disaster preparedness and response",
+      date: "March 10, 2025",
+      category: "Events",
+      categoryColor: "bg-rose-500",
+      image: Symposium
+    },
+
+    {
+      id: "5",
+      title: "Celebrating Our Office Launch – April 29, 2024",
+      excerpt: "A new chapter begins with the official opening of our headquarters",
+      date: "April 29, 2024",
+      category: "Events",
+      categoryColor: "bg-rose-500",
+      image: OFFICE_LAUNCH, // Make sure to import this image
+    },
+
+    {
+  id: "6",
+  title: "Celebrating the International Day of Persons with Disabilities at Ndohivyo Special School",
+  excerpt: "Amplifying voices and leadership in the disability community",
+  date: "December 3, 2023",
+  category: "Events",
+  categoryColor: "bg-rose-500", 
+  image: Disability, 
+  },
   ];
 
   return (

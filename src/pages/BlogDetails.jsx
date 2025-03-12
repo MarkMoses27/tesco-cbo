@@ -4,6 +4,9 @@ import { Link, useParams } from 'react-router-dom';
 import BeachCleanup from "../assets/blog/cleaning-msa.png";
 import DianiCP from "../assets/blog/dianicp.png";
 import Awareness from "../assets/blog/awareness.png";
+import Symposium from "../assets/blog/symposium.png";
+import Disability from "../assets/blog/disability.png";
+import OFFICE_LAUNCH from "../assets/blog/launch.png";
 
 // Sample blog posts data with consistent string IDs. To add another blog post, include another object here.
 const BLOG_POSTS = [
@@ -117,7 +120,7 @@ const BLOG_POSTS = [
   <h2>Interactive Sessions and Real Conversations</h2>
   <p>One of the highlights of the day was the series of interactive sessions. These weren’t your typical lectures—participants were encouraged to ask questions, share personal experiences, and engage in open discussions. This approach created a comfortable space where everyone felt heard and respected.</p>
   
-  <ul>
+  <ul >
     <li><strong>Clear Communication:</strong> Expert trainers used visual aids and real-time sign language interpretation to make sure that everyone could follow along without missing a detail.</li>
     <li><strong>Q&A Sessions:</strong> The open forum allowed participants to ask questions and clarify doubts, turning the training into a vibrant dialogue rather than a one-way lecture.</li>
     <li><strong>Practical Insights:</strong> Trainers shared everyday tips on managing personal health, understanding body rights, and accessing local resources, which were especially valuable for those navigating the complexities of the healthcare system.</li>
@@ -134,7 +137,364 @@ const BLOG_POSTS = [
   
   <h2>Looking to the Future</h2>
   <p>As the training concluded, the energy in the room was palpable. Participants expressed their gratitude for the opportunity to gain valuable insights into SRHR, and many looked forward to future sessions that would continue to build on this foundation.</p>`
-  }
+  },
+  {
+    id: "4",
+    title: "Celebrating the 10th National Symposium on Disaster and Risk Reduction in Kilifi County",
+    date: "March 10, 2025",
+    category: "Events",
+    categoryColor: "bg-rose-500",
+    image: Symposium,
+    excerpt: "Stakeholders gather to discuss strategies for disaster preparedness and response",
+    content: `
+      <h2>Building Resilience Through Collective Action</h2>
+      <p>In a world where disasters pose increasing threats to communities, empowering and educating youth has never been more crucial. As we mark the 10th National Symposium on Disaster and Risk Reduction in Kilifi County, the spotlight is on the role of education in protecting and empowering youth for disaster preparedness and resilience.</p>
+  
+      <blockquote>
+        <em>"This symposium represents a decade of progress in disaster management and sets the stage for youth-led solutions in climate resilience."</em>
+        <footer>- Kilifi County Governor</footer>
+      </blockquote>
+  
+      <h2>Key Symposium Highlights</h2>
+      <p>This year's gathering brought together 500+ participants from diverse sectors:</p>
+      <ul>
+        <li><strong>Government Representatives:</strong> National Disaster Operations Centre, County Executive members</li>
+        <li><strong>International Partners:</strong> UN agencies, Red Cross movement, WHO consultants</li>
+        <li><strong>Academic Institutions:</strong> Researchers from 15 Kenyan universities</li>
+        <li><strong>Youth Delegates:</strong> 200+ young leaders from across East Africa</li>
+      </ul>
+  
+      <div class="bg-blue-50 p-6 rounded-lg my-8">
+        <h3 class="text-xl font-semibold mb-4">Core Discussion Themes</h3>
+        <ul class="list-disc pl-6">
+          <li>Youth engagement in disaster preparedness frameworks</li>
+          <li>Climate change adaptation strategies</li>
+          <li>Technology integration in early warning systems</li>
+          <li>Policy reform for inclusive disaster management</li>
+        </ul>
+      </div>
+  
+      <h2>Transformative Outcomes</h2>
+      <p>The symposium yielded concrete action points:</p>
+      <ul>
+        <li><strong>Education Integration:</strong> Commitment to embed DRR in national school curricula by 2026</li>
+        <li><strong>Youth Innovation Fund:</strong> Launch of KSh 50M grant program for youth-led climate solutions</li>
+        <li><strong>Community Early Warning:</strong> Deployment of 200 weather stations in high-risk counties</li>
+        <li><strong>Policy Framework:</strong> Draft legislation for mandatory youth representation in disaster committees</li>
+      </ul>
+  
+      <blockquote class="bg-green-50 border-l-4 border-green-500 p-6 my-8">
+        <em>"This symposium taught me that disaster management isn't just about response - it's about empowering communities with knowledge and tools for prevention."</em>
+        <footer>- Aisha Mohamed, Youth Delegate from Lamu</footer>
+      </blockquote>
+  
+      <h2>Looking Ahead</h2>
+      <p>The closing ceremony unveiled an ambitious 3-year roadmap:</p>
+      <ol class="list-decimal pl-6">
+        <li>Establish regional youth disaster response teams</li>
+        <li>Develop mobile app for real-time risk reporting</li>
+        <li>Train 10,000 community first responders</li>
+        <li>Implement school safety certification program</li>
+      </ol>
+  
+      <div class="bg-yellow-50 p-6 rounded-lg my-8">
+        <h3 class="text-xl font-semibold mb-4">Call to Action</h3>
+        <p>Join Kenya's resilience movement:</p>
+        <ul class="list-disc pl-6">
+          <li>Volunteer with local disaster management committees</li>
+          <li>Participate in community preparedness drills</li>
+          <li>Advocate for climate-smart policies</li>
+          <li>Support youth innovation through the DRR Fund</li>
+        </ul>
+      </div>
+  
+      <p class="font-semibold mt-8">As we commemorate this milestone, let's renew our commitment to building disaster-resilient communities through education, innovation, and youth empowerment. Together, we can create a safer future for all Kenyans.</p>
+    `
+  },
+  // Add to your BLOG_POSTS array:
+  {
+    id: "5",
+    title: "Celebrating Our Office Launch – April 29, 2024",
+    excerpt: "A new chapter begins with the official opening of our headquarters",
+    date: "April 29, 2024",
+    category: "Events",
+    categoryColor: "bg-rose-500",
+    image: OFFICE_LAUNCH, // Make sure to import this image
+    content: `
+      <h2>A New Home for Innovation</h2>
+      <p>We are thrilled to announce the official launch of our office on April 29, 2024! This milestone represents years of dedication, growth, and our unwavering commitment to making a meaningful impact in our community.</p>
+  
+      <div class="bg-blue-50 p-6 rounded-lg my-8">
+        <h3 class="text-xl font-semibold mb-4">Event Highlights</h3>
+        <ul class="list-disc pl-6">
+          <li>Ribbon-cutting ceremony with special guests</li>
+          <li>Interactive office tours showcasing our new facilities</li>
+          <li>Live demonstrations of our latest projects</li>
+          <li>Networking reception with light refreshments</li>
+        </ul>
+      </div>
+  
+      <h2>What to Expect</h2>
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="font-semibold mb-2">Official Ceremonies</h3>
+          <ul class="list-disc pl-6">
+            <li>Welcome address by our Executive Director</li>
+            <li>Keynote speech from Hon. Jane Mwenda</li>
+            <li>Time capsule sealing ceremony</li>
+          </ul>
+        </div>
+  
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="font-semibold mb-2">Facility Features</h3>
+          <ul class="list-disc pl-6">
+            <li>Collaborative workspace zones</li>
+            <li>State-of-the-art training center</li>
+            <li>Eco-friendly design elements</li>
+            <li>Community meeting spaces</li>
+          </ul>
+        </div>
+      </div>
+  
+      <blockquote class="bg-green-50 border-l-4 border-green-500 p-6 my-8">
+        <em>"This office is more than just a building - it's a hub for innovation and community transformation."</em>
+        <footer>- Dr. Samuel Kariuki, Board Chairperson</footer>
+      </blockquote>
+  
+      <h2>Why This Matters</h2>
+      <div class="bg-yellow-50 p-6 rounded-lg my-8">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold mb-2">Enhanced Capacity</h3>
+            <ul class="list-disc pl-6">
+              <li>Double our training space capacity</li>
+              <li>Dedicated innovation lab</li>
+              <li>Accessible community resource center</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2">Sustainable Design</h3>
+            <ul class="list-disc pl-6">
+              <li>Solar-powered energy system</li>
+              <li>Rainwater harvesting</li>
+              <li>Native landscaping</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <h2>Join the Celebration</h2>
+      <p>This launch marks the beginning of an exciting new chapter. We invite you to:</p>
+      <ol class="list-decimal pl-6 my-8">
+        <li class="mb-4">Tour our new facilities during open house week</li>
+        <li class="mb-4">Participate in our inaugural community forum</li>
+        <li>Explore partnership opportunities in our innovation hub</li>
+      </ol>
+  
+      <div class="bg-purple-50 p-6 rounded-lg mt-12">
+        <p class="font-semibold text-center">Together, let's build a future of endless possibilities from our new home!</p>
+      </div>
+    `
+  },
+{
+  id: "6",
+  title: "Celebrating the International Day of Persons with Disabilities at Ndohivyo Special School",
+  excerpt: "Amplifying voices and leadership in the disability community",
+  date: "December 3, 2023",
+  category: "Events",
+  categoryColor: "bg-rose-500", 
+  image: Disability, // Add appropriate import
+  content: `
+    <h2>Championing Inclusive Development</h2>
+    <p>On December 3rd, we joined the global community in celebrating the International Day of Persons with Disabilities at Ndohivyo Special School in Samburu. This year's theme focused on amplifying voices and leadership within the disability community.</p>
+
+    <div class="bg-purple-50 p-6 rounded-lg my-8">
+      <h3 class="text-xl font-semibold mb-4">Event Highlights</h3>
+      <ul class="list-disc pl-6">
+        <li>Keynote address by Hon. Fatuma Achani, Governor of Kwale County</li>
+        <li>Student-led art and technology exhibitions</li>
+        <li>Sign language storytelling sessions</li>
+        <li>Community dialogue on accessibility</li>
+      </ul>
+    </div>
+
+    <h2>Three Pillars of Progress</h2>
+    <div class="grid md:grid-cols-3 gap-4 my-8">
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="font-semibold mb-2">1. Leadership Development</h3>
+        <p>Training programs for persons with disabilities in civic engagement and public service</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="font-semibold mb-2">2. Accessibility First</h3>
+        <p>Launch of county-wide accessibility audit initiative</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="font-semibold mb-2">3. Policy Reform</h3>
+        <p>Advocating for inclusive education and employment quotas</p>
+      </div>
+    </div>
+
+    <blockquote class="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-8">
+      <em>"Disability is not inability - today we've seen extraordinary talent and leadership from our students."</em>
+      <footer>- Mrs. Wanjiku Mwangi, School Principal</footer>
+    </blockquote>
+
+    <h2>Education Initiatives</h2>
+    <ul class="list-disc pl-6 my-8">
+      <li class="mb-4">
+        <strong>Adaptive Technology Lab:</strong>
+        <p>New computer center with assistive devices</p>
+      </li>
+      <li class="mb-4">
+        <strong>Vocational Training:</strong>
+        <p>Partnership with local industries for job placements</p>
+      </li>
+      <li>
+        <strong>Parent Support Network:</strong>
+        <p>Monthly workshops on advocacy and rights</p>
+      </li>
+    </ul>
+  `
+},
+// Add to your BLOG_POSTS array:
+{
+  id: "5",
+  title: "Celebrating the 10th National Symposium on Disaster and Risk Reduction in Kilifi County",
+  excerpt: "Empowering youth for disaster resilience through education and collaboration",
+  date: "October 13, 2023",
+  category: "Events",
+  categoryColor: "bg-rose-500",
+  image: Symposium,
+  content: `
+    <h2>Building a Disaster-Resilient Future</h2>
+    <p>In a world where disasters pose increasing threats to communities, empowering and educating youth has never been more crucial. As we mark the 10th National Symposium on Disaster and Risk Reduction in Kilifi County, the spotlight is on the role of education in protecting and empowering youth for disaster preparedness and resilience.</p>
+
+    <div class="bg-blue-50 p-6 rounded-lg my-8">
+      <h3 class="text-xl font-semibold mb-4">Key Symposium Details</h3>
+      <ul class="list-disc pl-6">
+        <li><strong>Date:</strong> October 13, 2023</li>
+        <li><strong>Location:</strong> Kilifi County Convention Center</li>
+        <li><strong>Participants:</strong> 500+ delegates from 15 counties</li>
+        <li><strong>Theme:</strong> "Youth Empowerment for Disaster Resilience"</li>
+      </ul>
+    </div>
+
+    <h2>Collaborative Framework</h2>
+    <p>This year's symposium aligns with the International Day for Disaster Risk Reduction, bringing together:</p>
+    <ul>
+      <li>National Disaster Operations Centre</li>
+      <li>Kenya Red Cross and UN agencies</li>
+      <li>Academic researchers from 8 universities</li>
+      <li>Youth representatives from 23 organizations</li>
+      <li>County Government of Kilifi leadership</li>
+    </ul>
+
+    <blockquote class="bg-green-50 border-l-4 border-green-500 p-6 my-8">
+      <em>"When we equip young people with disaster management skills, we're investing in our nation's resilience backbone."</em>
+      <footer>- Dr. Amina Mohamed, Symposium Keynote Speaker</footer>
+    </blockquote>
+
+    <h2>Core Focus Areas</h2>
+    <div class="grid md:grid-cols-2 gap-6 my-8">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="font-semibold mb-2">1. Youth & DRR Understanding</h3>
+        <p>Enhancing engagement in preparedness, response, and mitigation strategies through:</p>
+        <ul class="list-disc pl-6 mt-2">
+          <li>Community mapping exercises</li>
+          <li>Simulation drills</li>
+          <li>Digital reporting systems</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="font-semibold mb-2">2. Climate Action</h3>
+        <p>Addressing climate change as disaster catalyst through:</p>
+        <ul class="list-disc pl-6 mt-2">
+          <li>Mangrove restoration initiatives</li>
+          <li>Renewable energy projects</li>
+          <li>Early warning systems</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Education Initiatives Launched</h2>
+    <ol class="list-decimal pl-6 my-8">
+      <li class="mb-4">
+        <strong>DRR Curriculum Integration:</strong>
+        <p>Pilot program in 50 schools across coastal counties</p>
+      </li>
+      <li class="mb-4">
+        <strong>Youth Innovation Challenge:</strong>
+        <p>KSh 10M fund for community-led solutions</p>
+      </li>
+      <li>
+        <strong>Digital Learning Platform:</strong>
+        <p>Launch of mDready app for disaster preparedness training</p>
+      </li>
+    </ol>
+  `
+},
+{
+  id: "6",
+  title: "Celebrating the International Day of Persons with Disabilities at Ndohivyo Special School",
+  excerpt: "Amplifying voices and leadership in the disability community",
+  date: "December 3, 2023",
+  category: "Events",
+  categoryColor: "bg-rose-500", 
+  image: Disability, // Add appropriate import
+  content: `
+    <h2>Championing Inclusive Development</h2>
+    <p>On December 3rd, we joined the global community in celebrating the International Day of Persons with Disabilities at Ndohivyo Special School in Samburu. This year's theme focused on amplifying voices and leadership within the disability community.</p>
+
+    <div class="bg-purple-50 p-6 rounded-lg my-8">
+      <h3 class="text-xl font-semibold mb-4">Event Highlights</h3>
+      <ul class="list-disc pl-6">
+        <li>Keynote address by Hon. Fatuma Achani, Governor of Kwale County</li>
+        <li>Student-led art and technology exhibitions</li>
+        <li>Sign language storytelling sessions</li>
+        <li>Community dialogue on accessibility</li>
+      </ul>
+    </div>
+
+    <h2>Three Pillars of Progress</h2>
+    <div class="grid md:grid-cols-3 gap-4 my-8">
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="font-semibold mb-2">1. Leadership Development</h3>
+        <p>Training programs for persons with disabilities in civic engagement and public service</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="font-semibold mb-2">2. Accessibility First</h3>
+        <p>Launch of county-wide accessibility audit initiative</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="font-semibold mb-2">3. Policy Reform</h3>
+        <p>Advocating for inclusive education and employment quotas</p>
+      </div>
+    </div>
+
+    <blockquote class="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-8">
+      <em>"Disability is not inability - today we've seen extraordinary talent and leadership from our students."</em>
+      <footer>- Mrs. Wanjiku Mwangi, School Principal</footer>
+    </blockquote>
+
+    <h2>Education Initiatives</h2>
+    <ul class="list-disc pl-6 my-8">
+      <li class="mb-4">
+        <strong>Adaptive Technology Lab:</strong>
+        <p>New computer center with assistive devices</p>
+      </li>
+      <li class="mb-4">
+        <strong>Vocational Training:</strong>
+        <p>Partnership with local industries for job placements</p>
+      </li>
+      <li>
+        <strong>Parent Support Network:</strong>
+        <p>Monthly workshops on advocacy and rights</p>
+      </li>
+    </ul>
+  `
+},
+  
 ];
 
 const BlogDetails = () => {

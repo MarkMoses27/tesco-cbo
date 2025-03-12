@@ -24,10 +24,10 @@ const Programs = () => {
       color: "bg-blue-100"
     },
     {
-      title: "GBV Protection & Non-Discrimination",
+      title: "GBV Response & Non-Discrimination",
       icon: ShieldCheckIcon,
       points: [
-        "GBV prevention and gender equality education",
+        "GBV response and gender equality education",
         "Legal assistance and counseling for survivors",
         "Safe spaces and referral services",
         "Anti-discrimination advocacy programs",
