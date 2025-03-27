@@ -60,12 +60,12 @@ const Programs = () => {
       color: "bg-green-100"
     },
     {
-      title: "Inclusive Education & Empowerment",
+      title: "Inclusive Education & Economic Empowerment",
       icon: AcademicCapIcon,
       points: [
         "Quality education for vulnerable children",
         "Vocational training programs",
-        "Scholarships for youth with disabilities",
+        "Scholarships for children with disabilities",
         "Mentorship and career guidance",
         "Digital literacy initiatives"
       ],
