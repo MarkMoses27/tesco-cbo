@@ -1,15 +1,29 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { 
   HeartIcon, ShieldCheckIcon, ScaleIcon, 
   AcademicCapIcon, HandRaisedIcon, UserGroupIcon,
-  BriefcaseIcon, BookOpenIcon, CurrencyDollarIcon,
-  BuildingLibraryIcon, DevicePhoneMobileIcon, SunIcon
+  BriefcaseIcon, CurrencyDollarIcon,
+  BuildingLibraryIcon, SunIcon
 } from '@heroicons/react/24/outline';
 
 const Programs = () => {
   const focusAreas = [
+    {
+      title: "Climate Justice & Resilience Initiatives",
+      icon: SunIcon,
+      points: [
+        "Climate-smart agriculture training and regenerative practices",
+        "Rainwater harvesting and efficient irrigation systems",
+        "Community-led reforestation and agroforestry programs",
+        "Support for eco-friendly businesses (beekeeping, organic crafts)",
+        "Renewable energy solutions (solar, biogas)",
+        "Disaster preparedness and early warning systems",
+        "Waste management and recycling initiatives",
+        "Youth-led climate justice advocacy campaigns"
+      ],
+      color: "bg-teal-100"
+    },
     {
       title: "Health & Wellbeing",
       icon: HeartIcon,
@@ -19,7 +33,7 @@ const Programs = () => {
         "Mental health awareness campaigns",
         "Preventive care and community health education",
         "Psychosocial support for emotional challenges",
-        "Sexual Reproductive Health Rights ( SRHR ) services"
+        "Sexual Reproductive Health Rights (SRHR) services"
       ],
       color: "bg-blue-100"
     },
@@ -256,24 +270,24 @@ const Programs = () => {
             Join our movement to empower vulnerable communities and build sustainable futures
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <Link to="/get-involved/donate">
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        className="bg-blue-800 text-white px-8 py-4 rounded-xl flex items-center gap-2"
-      >
-        <CurrencyDollarIcon className="h-6 w-6" />
-        Support Our Work
-      </motion.button>
-    </Link>
+            <Link to="/get-involved/donate">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="bg-blue-800 text-white px-8 py-4 rounded-xl flex items-center gap-2"
+              >
+                <CurrencyDollarIcon className="h-6 w-6" />
+                Support Our Work
+              </motion.button>
+            </Link>
             <Link to="/get-involved/volunteer">
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        className="bg-white text-blue-800 px-8 py-4 rounded-xl border-2 border-blue-800 flex items-center gap-2"
-      >
-        <BriefcaseIcon className="h-6 w-6" />
-        Join Our Team
-      </motion.button>
-    </Link>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="bg-white text-blue-800 px-8 py-4 rounded-xl border-2 border-blue-800 flex items-center gap-2"
+              >
+                <BriefcaseIcon className="h-6 w-6" />
+                Join Our Team
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
       </div>
