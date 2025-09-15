@@ -18,6 +18,10 @@ import Blog from './pages/Blog'; // Add Blog component import
 import BlogDetails from './pages/BlogDetails'; // Add BlogDetails component import
 import Contact from './pages/Contact'; // Add Contact component import
 
+
+
+// projects page
+import ProjectsAndImpact from './pages/ProjectsAndImpact'; // Add ProjectsAndImpact component import
 // Scroll restoration component
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -186,7 +190,21 @@ const AnimatedRoutes = () => {
     </motion.div>
   }
 />
-        <Route
+
+<Route
+  path="/projects"
+  element={
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={{ duration: 0.3 }}
+    >
+      <ProjectsAndImpact />
+    </motion.div>
+  }
+/>  <Route
   path="/get-involved/donate"
   element={
     <motion.div

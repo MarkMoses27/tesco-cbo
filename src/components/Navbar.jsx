@@ -62,7 +62,9 @@ const Navbar = () => {
         { name: "Volunteer", path: "/get-involved/volunteer" },
         { name: "Donate", path: "/get-involved/donate" },
       ]
+    
     },
+    { name: "Projects and Impact", path: "/projects" },
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" }
   ];
