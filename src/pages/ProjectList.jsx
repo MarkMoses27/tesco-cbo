@@ -18,20 +18,20 @@ const ProjectList = () => {
         </div>
 
         {/* Project Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Poultry Farming Project */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
             <div className="relative h-72">
               <img
                 src={poultryImage}
                 alt="Poultry Farming"
-                className="w-full h-full object-cover"  // Ensure the image fills the container
+                className="w-full h-full object-cover"
               />
-              {/* Reduced Overlay Opacity */}
-              <div className="absolute inset-0 bg-black bg-opacity-20" /> {/* Overlay with reduced opacity */}
-              <div className="absolute bottom-4 left-4 right-4 z-10"> {/* z-10 ensures text is above the overlay */}
-                <h2 className="text-2xl font-bold text-white mb-2">Poultry Farming Project</h2>
-                <p className="text-white text-opacity-90">
+              {/* Overlay with dynamic opacity */}
+              <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-60" />
+              <div className="absolute bottom-6 left-6 right-6 z-10">
+                <h2 className="text-3xl font-semibold text-white mb-2 shadow-md">Poultry Farming Project</h2>
+                <p className="text-white text-opacity-80">
                   A sustainable initiative creating livelihood opportunities while improving food security.
                 </p>
               </div>
@@ -47,18 +47,18 @@ const ProjectList = () => {
           </div>
 
           {/* Green Coast, Clean Oceans */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
             <div className="relative h-72">
               <img
                 src={greenCoastImage}
                 alt="Green Coast, Clean Oceans"
                 className="w-full h-full object-cover"
               />
-              {/* Reduced Overlay Opacity */}
-              <div className="absolute inset-0 bg-black bg-opacity-20" />
-              <div className="absolute bottom-4 left-4 right-4 z-10">
-                <h2 className="text-2xl font-bold text-white mb-2">Green Coast, Clean Oceans</h2>
-                <p className="text-white text-opacity-90">
+              {/* Overlay with dynamic opacity */}
+              <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-60" />
+              <div className="absolute bottom-6 left-6 right-6 z-10">
+                <h2 className="text-3xl font-semibold text-white mb-2 shadow-md">Green Coast, Clean Oceans</h2>
+                <p className="text-white text-opacity-80">
                   Promoting environmental stewardship through coastal cleanups and marine conservation.
                 </p>
               </div>
@@ -74,20 +74,20 @@ const ProjectList = () => {
           </div>
 
           {/* Fostering Inclusion Through Disability Registration and Advocacy */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
             <div className="relative h-72">
               <img
                 src={disabilityImage}
                 alt="Disability Registration"
                 className="w-full h-full object-cover"
               />
-              {/* Reduced Overlay Opacity */}
-              <div className="absolute inset-0 bg-black bg-opacity-20" />
-              <div className="absolute bottom-4 left-4 right-4 z-10">
-                <h2 className="text-2xl font-bold text-white mb-2">
+              {/* Overlay with dynamic opacity */}
+              <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-60" />
+              <div className="absolute bottom-6 left-6 right-6 z-10">
+                <h2 className="text-3xl font-semibold text-white mb-2 shadow-md">
                   Fostering Inclusion Through Disability Registration and Advocacy
                 </h2>
-                <p className="text-white text-opacity-90">
+                <p className="text-white text-opacity-80">
                   Empowering individuals with disabilities to access their rights and opportunities.
                 </p>
               </div>
@@ -103,20 +103,20 @@ const ProjectList = () => {
           </div>
 
           {/* Tech for Change: Digital Inclusion & Empowerment for Girls and Women */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
             <div className="relative h-72">
               <img
                 src={techForChangeImage}
                 alt="Tech for Change"
                 className="w-full h-full object-cover"
               />
-              {/* Reduced Overlay Opacity */}
-              <div className="absolute inset-0 bg-black bg-opacity-20" />
-              <div className="absolute bottom-4 left-4 right-4 z-10">
-                <h2 className="text-2xl font-bold text-white mb-2">
+              {/* Overlay with dynamic opacity */}
+              <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-60" />
+              <div className="absolute bottom-6 left-6 right-6 z-10">
+                <h2 className="text-3xl font-semibold text-white mb-2 shadow-md">
                   Tech for Change: Digital Inclusion & Empowerment for Girls and Women
                 </h2>
-                <p className="text-white text-opacity-90">
+                <p className="text-white text-opacity-80">
                   Bridging the gender gap in the digital economy by equipping young women with digital skills.
                 </p>
               </div>
@@ -137,3 +137,4 @@ const ProjectList = () => {
 };
 
 export default ProjectList;
+ 
