@@ -17,11 +17,14 @@ import Donate from './pages/Donate'; // Add Donate component import
 import Blog from './pages/Blog'; // Add Blog component import
 import BlogDetails from './pages/BlogDetails'; // Add BlogDetails component import
 import Contact from './pages/Contact'; // Add Contact component import
+import ProjectList from './pages/ProjectList';
+import PoultryFarming from './pages/PoultryFarming'; // Add PoultryFarming component import
+import GreenCoastCleanOceans from './pages/GreenCoastCleanOceans';
+import TechForChange from './pages/TechForChange'; // Add TechForChange component import
+import FosteringInclusion from './pages/FosteringInclusion'; // Add FosteringInclusion component import
 
 
 
-// projects page
-import ProjectsAndImpact from './pages/ProjectsAndImpact'; // Add ProjectsAndImpact component import
 // Scroll restoration component
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -201,10 +204,72 @@ const AnimatedRoutes = () => {
       variants={pageVariants}
       transition={{ duration: 0.3 }}
     >
-      <ProjectsAndImpact />
+      <ProjectList />
     </motion.div>
   }
-/>  <Route
+/>
+
+<Route 
+  path="/projects/poultry-farming"
+  element={
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={{ duration: 0.3 }}
+    >
+      <PoultryFarming />
+    </motion.div>
+  }
+/>
+
+<Route
+  path="/projects/green-coast-clean-oceans"
+  element={
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={{ duration: 0.3 }}
+    >
+      <GreenCoastCleanOceans />
+    </motion.div>
+  }
+/>
+
+<Route
+  path="/projects/tech-for-change"
+  element={
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={{ duration: 0.3 }}
+    >
+      <TechForChange />
+    </motion.div>
+  }
+/>
+<Route
+  path="/projects/fostering-inclusion"
+  element={
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={{ duration: 0.3 }}
+    >
+      <FosteringInclusion />
+    </motion.div>
+  }
+/>
+
+
+<Route
   path="/get-involved/donate"
   element={
     <motion.div
